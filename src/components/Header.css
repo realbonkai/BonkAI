@@ -1,0 +1,154 @@
+/* General Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  z-index: 20;
+  width: 96%;
+  position: relative;
+  font-family: "Poppins", sans-serif; /* Apply Poppins font to the entire header */
+}
+
+/* Logo Section */
+.logo-container .logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Center Section: Navigation */
+.nav-menu {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700; /* Make the font bold */
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #ff33a3;
+}
+
+/* Right Section: Wallet Button */
+.wallet-button {
+  display: flex;
+  align-items: center;
+ 
+}
+
+/* Mobile Menu: Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Mobile Responsiveness */
+/* Logo, Hamburger, and Wallet Section - Mobile View */
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .logo-container,
+  .hamburger,
+  .wallet-button {
+    flex: 1; /* Each section gets 33% */
+    display: flex;
+    justify-content: center; /* Center content within each section */
+    align-items: center;
+  }
+
+  .logo-container {
+    justify-content: flex-start; /* Align the logo to the left */
+  }
+
+  .hamburger {
+    justify-content: center; /* Center the hamburger menu */
+    cursor: pointer;
+  }
+
+  .wallet-button {
+    justify-content: flex-end; /* Align the wallet button to the right */
+  }
+}
+
+/* Hamburger Menu */
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Wallet Button */
+.wallet-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #121212;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-200%);
+  transition: transform 0.3s ease;
+}
+
+.nav-menu.open {
+  transform: translateY(0);
+}
+
+.nav-menu ul {
+  list-style: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav-menu ul li {
+  margin: 10px 0;
+}
+
+.nav-menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #ff33a3;
+}

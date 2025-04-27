@@ -1,0 +1,72 @@
+
+.flux-wrapper {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+}
+
+.flux-title {
+  font-size: 23 px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.flux-input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.flux-button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #000000, #ff0000);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flux-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.flux-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.flux-result {
+  margin-top: 20px;
+}
+
+.flux-image {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.flux-label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.flux-file-input {
+  display: block;
+  margin: 10px auto 20px auto;
+  font-size: 14px;
+}

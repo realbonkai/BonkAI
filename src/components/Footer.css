@@ -1,0 +1,40 @@
+/* Footer Styling */
+.footer {
+    background: black; /* Dark gradient background */
+    color: #ffffff; /* White text color */
+    padding: 20px 0; /* Padding for spacing */
+    text-align: center; /* Center text */
+    position: relative; /* Positioning for footer */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  }
+  
+  .footer-content {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-links {
+    margin-top: 10px; /* Space above links */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Space between links */
+  }
+  
+  .footer-links a {
+    color: #ff6200; /* Changed link color to orange from Memes */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Standard font size */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .footer-links a:hover {
+    color: #ff7f00; /* Changed hover color to a lighter orange */
+    text-decoration: underline; /* Underline on hover */
+  }
+  

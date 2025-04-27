@@ -1,0 +1,481 @@
+/* Import Pixelated Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Bangers', cursive;
+  background: #fff;
+  color: #FF6B35;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Homepage Container */
+.homepage {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.homepage::before {
+  content: "BONK";
+  position: absolute;
+  font-size: 20vw;
+  opacity: 0.03;
+  transform: rotate(-45deg);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Logo Style */
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+  image-rendering: pixelated;
+}
+
+/* Title */
+.title {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(3rem, 10vw, 6rem);
+  color: #FF6B35;
+  text-shadow: 4px 4px 0px rgba(255, 107, 53, 0.2);
+  margin: 1rem 0 2rem;
+  animation: bounce 1s ease infinite;
+  font-size: 50px;
+  letter-spacing: 4px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Subtitle */
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+/* Button */
+.start-button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  border: 3px solid #00BFFF;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #FF6F61, #FF7F00);
+  color: #FFF;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.start-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.start-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 0 2rem 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 3px solid #FF6B35;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+.text-input:focus {
+  box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
+}
+
+.bonk-button {
+  width: 100%;
+  padding: 1rem;
+  font-family: 'Bangers', cursive;
+  font-size: 1.4rem;
+  background-color: #FF6B35;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+}
+
+.bonk-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+.bonk-button:active {
+  transform: scale(0.98);
+}
+
+.result-area {
+  background-color: #FFF1E6;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-family: 'Bangers', cursive;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #FF6B35;
+  min-height: 80px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  border: 3px dashed #FF6B35;
+  letter-spacing: 2px;
+  animation: fadeIn 0.5s ease;
+  word-wrap: break-word;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .homepage {
+    padding: 2rem;
+  }
+
+  .contract-address-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .input-area {
+    flex-direction: row;
+  }
+
+  .bonk-button {
+    width: auto;
+    min-width: 150px;
+  }
+
+  .copy-button {
+    width: auto;
+  }
+
+  .contract-address {
+    font-size: 1rem;
+  }
+}
+
+/* Prevent zoom on input focus for iOS */
+@media screen and (max-width: 768px) {
+  input[type="text"] {
+    font-size: 16px;
+  }
+}
+
+.chart-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.chart-button {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  font-family: 'Bangers', cursive;
+  font-size: 1.8rem;
+  background-color: #FF6B35;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.chart-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+.contract-info {
+  background: rgba(255, 107, 53, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.contract-label {
+  font-family: 'Bangers', cursive;
+  font-size: 1.4rem;
+  color: #FF6B35;
+  margin: 0 0 1rem 0;
+  letter-spacing: 1px;
+}
+
+.contract-address-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contract-address {
+  font-family: monospace;
+  font-size: 0.9rem;
+  background: white;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 107, 53, 0.3);
+  color: #FF6B35;
+  word-break: break-all;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.copy-button {
+  padding: 0.8rem 2rem;
+  font-family: 'Bangers', cursive;
+  font-size: 1.1rem;
+  background-color: white;
+  color: #FF6B35;
+  border: 2px solid #FF6B35;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.copy-button:hover {
+  background-color: #FF6B35;
+  color: white;
+}
+
+.copy-button:active {
+  transform: scale(0.95);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.x-link, .github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FF6B35;
+  transition: all 0.3s ease;
+}
+
+.x-link:hover, .github-link:hover {
+  transform: scale(1.1);
+  background-color: #ff8255;
+}
+
+.x-icon, .github-icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.bonk-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .bonk-logo {
+    width: 120px;
+  }
+}
+
+.links-section {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 1rem;
+}
+
+.link-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contract-info {
+  background: rgba(255, 107, 53, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.contract-label {
+  font-family: 'Bangers', cursive;
+  font-size: 1.2rem;
+  color: #FF6B35;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.contract-address-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contract-address {
+  font-family: monospace;
+  font-size: 0.8rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 107, 53, 0.3);
+  color: #FF6B35;
+  word-break: break-all;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.copy-button {
+  padding: 0.5rem 1rem;
+  font-family: 'Bangers', cursive;
+  font-size: 1rem;
+  background-color: white;
+  color: #FF6B35;
+  border: 2px solid #FF6B35;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.copy-button:hover {
+  background-color: #FF6B35;
+  color: white;
+}
+
+.chart-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-family: 'Bangers', cursive;
+  font-size: 1.4rem;
+  background-color: #FF6B35;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.chart-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+.x-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FF6B35;
+  transition: all 0.3s ease;
+}
+
+.x-link:hover {
+  transform: scale(1.1);
+  background-color: #ff8255;
+}
+
+.x-icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+@media (max-width: 768px) {
+  .links-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .link-column {
+    width: 100%;
+  }
+
+  .chart-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contract-info {
+    max-width: 300px;
+  }
+}
